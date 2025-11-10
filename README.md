@@ -21,7 +21,8 @@ final_res tabel
 <img width="1885" height="759" alt="image" src="https://github.com/user-attachments/assets/0262388f-3496-45c1-a5f7-3f23afa78f0f" />
                                                                                                                                                                                                                                                                                 
 
-How to run                                                                                                                         
+How to run
+----------                                                                                                                        
 airflow is run locally in machine
 apache-airflow==2.9.3                                                                                                     
 Activate virtual env and run it inside virtual env                                                                               
