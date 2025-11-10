@@ -43,6 +43,12 @@ def fetch_weather_data():
 
     #  generating hash for the fetched weather data
     def generate_hash(values_tuple):
+        """hash is created for a particular row, when code runs 2nd time
+        the hash is compared(1st generated and 2nd generated hasg), 
+        if hash is same then there is no need to update all data.
+        Hash is same only if data is same.
+        If different hash, row is updated
+        """
         raw = "|".join(map(str, values_tuple))   # flatten clean
         return hashlib.md5(raw.encode()).hexdigest()
 
@@ -261,3 +267,4 @@ with DAG(
 
     # setting up order
     fetch_task >> transform_task  # type: ignore
+
